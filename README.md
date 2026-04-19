@@ -31,27 +31,30 @@
 
 ## 🖼️ Visual Samples
 
-<p align="center">
-  <img src="samples/1.jpg" width="45%">
-  <img src="samples/2.jpg" width="45%">
-</p>
+<table align="center">
+<tr>
+<td align="center">
+<img src="samples/1.jpg" width="350"><br>
+<b>Sample 1</b>
+</td>
+<td align="center">
+<img src="samples/2.jpg" width="350"><br>
+<b>Sample 2</b>
+</td>
+</tr>
 
-<p align="center">
-  <b>Sample 1</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Sample 2</b>
-</p>
+<tr>
+<td align="center">
+<img src="samples/3.jpg" width="350"><br>
+<b>Sample 3</b>
+</td>
+<td align="center">
+<img src="samples/4.jpg" width="350"><br>
+<b>Sample 4</b>
+</td>
+</tr>
+</table>
 
-<p align="center">
-  <img src="samples/3.jpg" width="45%">
-  <img src="samples/4.jpg" width="45%">
-</p>
-
-<p align="center">
-  <b>Sample 3</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Sample 4</b>
-</p>
-
----
 
 ## ⚙️ Installation
 
