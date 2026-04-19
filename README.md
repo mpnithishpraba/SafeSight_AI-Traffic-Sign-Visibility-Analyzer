@@ -6,26 +6,31 @@
 
 ## ✨ Features
 
-* 🎬 **Video Processing**
-  Analyze recorded footage and export annotated videos
+* 🎬 **Video Processing** – Analyze recorded footage and export annotated videos
+* 📷 **Live Camera Feed** – Real-time detection with GPS logging
+* 🖼 **Image Analysis** – Batch processing for visibility scoring
+* 📍 **GPS Integration** – Logs coordinates of detected signs
+* 📊 **CSV Logging** – Generates structured reports
+* 🌓 **Day/Night Optimization** – CLAHE enhancement for low light
+* 🎯 **Visibility Classification** – 🔴 Poor | 🟡 Moderate | 🟢 Good
 
-* 📷 **Live Camera Feed**
-  Real-time detection with GPS logging
+---
 
-* 🖼 **Image Analysis**
-  Batch processing for visibility scoring
+## 🧠 Visibility Calculation Logic
 
-* 📍 **GPS Integration**
-  Logs coordinates of detected signs
+### 📐 Formula
 
-* 📊 **CSV Logging**
-  Generates structured reports
+```text
+Visibility Score = Mean(Intensity of Top 15% Brightest Pixels) / 255.0
+```
 
-* 🌓 **Day/Night Optimization**
-  CLAHE enhancement for low light
+### 📊 Classification
 
-* 🎯 **Visibility Classification**
-  🔴 Poor 🟡 Moderate 🟢 Good
+| Score Range | Condition   | Meaning                            |
+| ----------- | ----------- | ---------------------------------- |
+| ≥ 0.65      | 🟢 GOOD     | Highly reflective, clearly visible |
+| 0.45 – 0.65 | 🟡 MODERATE | Degrading, needs attention         |
+| < 0.45      | 🔴 POOR     | Critical, faded or non-reflective  |
 
 ---
 
@@ -55,6 +60,7 @@
 </tr>
 </table>
 
+---
 
 ## ⚙️ Installation
 
@@ -66,25 +72,11 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Run
+## 🚀 Run the Application
 
 ```bash
 python app.py
 ```
-
----
-
-## 📊 Model Performance
-
-| Metric    | Value |
-| --------- | ----- |
-| Precision | 94.9% |
-| Recall    | 75%   |
-| mAP@50    | 85.3% |
-| mAP@50-95 | 57%   |
-
-✔ High precision
-⚠️ Recall can improve for distant signs
 
 ---
 
@@ -104,13 +96,58 @@ SafeSight-AI/
 
 ---
 
+## 📊 Model Performance
+
+| Metric    | Value |
+| --------- | ----- |
+| Precision | 94.9% |
+| Recall    | 75%   |
+| mAP@50    | 85.3% |
+| mAP@50-95 | 57%   |
+
+✔ High precision
+⚠️ Recall can improve for distant/small signs
+
+---
+
+## 🚀 Scalability
+
+* 📁 **Seamless Workspaces**
+  Auto-generates session folders for logs and outputs
+
+* ⚡ **Batch Processing**
+  Process thousands of images for large-scale audits
+
+* 🔧 **Modular Architecture**
+  YOLO model can be retrained or replaced easily
+
+---
+
+## 💰 Cost Effective
+
+* ❌ No cloud or API costs
+* 💻 Runs completely offline
+* ⚙️ Works on standard laptops
+* 🔓 Built on open-source AI
+
+---
+
+## 🌱 Sustainability
+
+* 🚗 Reduces need for survey vehicles
+* ♻️ Minimizes material waste
+* 🔍 Enables targeted maintenance
+* 🌍 Energy-efficient offline processing
+
+---
+
 ## 🚀 Future Improvements
 
-* Improve recall (small & far signs)
+* Improve recall (small & distant signs)
 * Expand dataset (2000+ images)
 * Edge deployment (Jetson / Raspberry Pi)
-* Cloud dashboard
-* Multi-class detection
+* Cloud monitoring dashboard
+* Multi-class traffic sign detection
 
 ---
 
@@ -118,6 +155,7 @@ SafeSight-AI/
 
 If you like this project:
 
-👉 Star the repo
+👉 Star the repository
 👉 Share it
-👉 Contribute
+👉 Contribute improvements
+
